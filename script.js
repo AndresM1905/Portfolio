@@ -5,9 +5,11 @@ boton.addEventListener("click",()=>{
     nav.classList.toggle("open");
 });
 
+
 document.querySelector('nav').addEventListener('click', function(event) {
     event.stopPropagation();
 });
+
 
 
 document.addEventListener("scroll",()=>{
@@ -19,7 +21,6 @@ buttomNav=nav.getBoundingClientRect().bottom;
     }
 
 });
-
 window.addEventListener("click",()=>{
 if(nav.classList.contains("open")){
     nav.classList.remove("open") ; 
