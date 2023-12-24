@@ -1,27 +1,63 @@
+/* Estilos base para el header */
 header {
-    padding: 5rem 0 3rem;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(var(--black), var(--black2));
-& img{
-  width: 150px;  
+  padding: 5rem 0 3rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(var(--black), var(--black2));
+  z-index: 0;
 }
 
+/* Estilo para las imágenes dentro del header */
+header img {
+  width: 150px;
 }
 
+/* Estilo para el video */
 header video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0.15;
-    pointer-events: none;
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.15;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  
 }
 
+/* Ocultar los controles de medios en WebKit (no siempre efectivo en iOS) */
 video::-webkit-media-controls {
   display: none;
 }
 
+/* Estilos para imagenHeader: oculta por defecto */
+#imagenHeader {
+  background: url('../img/header/header.png') no-repeat center center;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: -1;
+  transform: scale(1.4);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  
+}
+
+/* Media query para pantallas más pequeñas (dispositivos móviles) */
+@media (max-width: 850px) {
+  /* Oculta el video en dispositivos móviles */
+  header video {
+      opacity: 0;
+  }
+
+  /* Muestra la imagen en dispositivos móviles */
+  #imagenHeader {
+    opacity: 0.20;
+
+  }
+}
