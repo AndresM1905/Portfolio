@@ -1,15 +1,27 @@
 /* Estilos base para el header */
 header {
-  padding: 5rem 0 3rem;
+  padding: 0rem 0 3rem;
   position: relative;
   overflow: hidden;
   background: linear-gradient(var(--black), var(--black2));
   z-index: 0;
 }
+.scroll {
+  padding: 0rem 0 3rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(var(--black), var(--black2));
+  z-index: 0;
+  height: 1300px;
+}
+
+
+
 
 /* Estilo para las imágenes dentro del header */
 header img {
   width: 150px;
+  opacity: 0;
 }
 
 /* Estilo para el video */
