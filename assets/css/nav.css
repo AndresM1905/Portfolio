@@ -10,12 +10,10 @@
     position: absolute;
     z-index: 3;
     width: 100%;
-    top:500px;
-    /*
-    
+    top:300px;
     right: -450px;
     transform: rotate(90deg);
-    opacity: 0;*/
+    opacity: 0;
 
 }
 .navFijo {
