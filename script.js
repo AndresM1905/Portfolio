@@ -136,7 +136,7 @@ imgCircle.style.width =(600-ancho)+"px";
 
 //---------bloque top-------
 
-var bajada = porcentajeDesplazamiento * 550;
+var bajada = porcentajeDesplazamiento * 450;
 imgCircle.style.top= (450+bajada)+"px";
 
 //-------------------------------
