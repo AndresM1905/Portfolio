@@ -6,7 +6,7 @@ boton.addEventListener("click",()=>{
 });
 
 
-document.querySelector('nav').addEventListener('click', function(event) {
+document.querySelector('#hamburger').addEventListener('click', function(event) {
     event.stopPropagation();
 });
 
@@ -17,6 +17,7 @@ let h1=document.querySelector("#h1");
 let hr=document.querySelector("#hr");
 let h2=document.querySelector("#h2");
 let imgWelcome=document.querySelector("#welcome");
+let h1Welcome=document.querySelector("#h1Welcome");
 
 
 let navScroll=document.querySelector("#navbar");
@@ -62,24 +63,15 @@ moveImgWelcome(porcentajeDesplazamiento);
 });
 window.addEventListener("click",()=>{
 if(nav.classList.contains("open")){
-    nav.classList.remove("open") ; 
+      nav.classList.remove("open") ;
 };
 
-});
-
-
-
-boton.addEventListener("click",()=>{
-    nav.classList.toggle("open");
-
-    //header.classList.toggle("scroll");
-    //nav.classList.toggle("navScroll");
-    
 });
 
 function moveImgWelcome(porcentajeDesplazamiento){
     var opacityImgWelcome = porcentajeDesplazamiento * 2; 
     imgWelcome.style.opacity=1-opacityImgWelcome;
+    h1Welcome.style.opacity=1-opacityImgWelcome;
 };
 
 function moveH2(porcentajeDesplazamiento){

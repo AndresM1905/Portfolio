@@ -85,14 +85,14 @@ header img {
 
 /* Estilo para el video */
 header video {
-  display: none;
+  display: inline-block;
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   min-width: 100%;
   min-height: 100%;
-  opacity: 0.15;
+  opacity: 0.50;
   pointer-events: none;
   transition: opacity 0.5s ease;
   
@@ -118,16 +118,15 @@ video::-webkit-media-controls {
 #imagenHeader {
   background: url('../img/header/header.png') no-repeat center center;
   position: absolute;
-  top: 0%;
+  top: 20%;
   left: 0%;
   min-width: 100%;
   min-height: 100%;
-  opacity: 0.15;
+  opacity: 1;
   pointer-events: none;
   z-index: -1;
   transform: scale(1.4);
   transition: opacity 0.5s ease;
-  opacity: 0.20;
   
   
 }
@@ -136,7 +135,7 @@ video::-webkit-media-controls {
 @media (min-width: 850px) {
   /* Oculta el video en dispositivos móviles */
   header video {
-      opacity: 0;
+      opacity: 0.25;
       
   }
 
