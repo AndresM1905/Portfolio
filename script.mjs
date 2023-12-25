@@ -18,6 +18,8 @@ let hr=document.querySelector("#hr");
 let h2=document.querySelector("#h2");
 let imgWelcome=document.querySelector("#welcome");
 let h1Welcome=document.querySelector("#h1Welcome");
+let imagenHeader=document.querySelector("#imagenHeader");
+
 
 
 let navScroll=document.querySelector("#navbar");
@@ -39,9 +41,20 @@ function actualizarScroll() {
 
 var desplazamientoObjetivo = 700;
 
+
+//maaaaaaaaaaaas
+let porcentajeDesplazamientoMas;
+
+
+var estilo = window.getComputedStyle(navScroll);
+var posicion = estilo.getPropertyValue("position");
+
 document.addEventListener("scroll",()=>{
 topCentro=document.querySelector("#portfolio").getBoundingClientRect().top;
 buttomNav=nav.getBoundingClientRect().bottom;
+
+estilo = window.getComputedStyle(navScroll);
+posicion = estilo.getPropertyValue("position");
 
  actualizarScroll();
 
@@ -49,7 +62,7 @@ buttomNav=nav.getBoundingClientRect().bottom;
         nav.classList.toggle("open");
     }
 //animation
-
+porcentajeDesplazamientoMas = Math.min(valorActualScroll / 920, 1);
 var porcentajeDesplazamiento = Math.min(valorActualScroll / desplazamientoObjetivo, 1);
 
 moveNav(porcentajeDesplazamiento);
@@ -58,6 +71,7 @@ moveH1(porcentajeDesplazamiento);
 moveHr(porcentajeDesplazamiento);
 moveH2(porcentajeDesplazamiento);
 moveImgWelcome(porcentajeDesplazamiento);
+moveImgHead(porcentajeDesplazamiento);
 
 
 });
@@ -67,6 +81,18 @@ if(nav.classList.contains("open")){
 };
 
 });
+
+
+function moveImgHead(porcentajeDesplazamiento){
+    //imagenHeader
+
+//---------bloque top-------
+    
+var bajada = porcentajeDesplazamiento * 55;
+imagenHeader.style.top= (-30+bajada)+"%";
+};
+
+
 
 function moveImgWelcome(porcentajeDesplazamiento){
     var opacityImgWelcome = porcentajeDesplazamiento * 2; 
@@ -86,7 +112,6 @@ function moveH2(porcentajeDesplazamiento){
     
     var bajada = porcentajeDesplazamiento * 1820;
     h2.style.top= (-900+bajada)+"px";
-    console.log(-950+bajada);
     
     //---------bloque translate-X -------
     
@@ -205,10 +230,39 @@ imgCircle.style.top= (450+bajada)+"px";
 
 
 
+let grados;
+
 function moveNav (porcentajeDesplazamiento){
 
+   console.log("mas:",porcentajeDesplazamientoMas);
+if(porcentajeDesplazamientoMas>=1){
+
+    if(posicion!=='sticky'){
+    navScroll.style.top = '50px';
+    navScroll.style.position = 'sticky';
+    navScroll.style.transform = "translate(0px,"+-50+"px)";
+    document.querySelector("#portfolio>h3").classList.toggle("navRelative");
+    document.querySelector("#portfolio").classList.toggle("navRelative");
+    //transform: translate(0, -20px);
+}
+
+    
+   
+     
+}else{
+
+    if(posicion!=="absolute"&&porcentajeDesplazamiento<1){
+        navScroll.style.position = "absolute";
+        navScroll.style.top= 1300+"px";
+        document.querySelector("#portfolio>h3").classList.toggle("navRelative");
+    document.querySelector("#portfolio").classList.toggle("navRelative");
+
+    }
+
+if(posicion==="absolute"){
+
 //---------bloque rotacion-------
-let grados = porcentajeDesplazamiento * 90; // 360 grados para una rotación completa
+grados = porcentajeDesplazamiento * 90;
 
 navScroll.style.transform = 'rotate(' + (90-grados) + 'deg)';
 
@@ -229,5 +283,6 @@ var bajada = porcentajeDesplazamiento * 1000;
 navScroll.style.top= (300+bajada)+"px";
 
 //-------------------------------
-
+}
+}
 }
