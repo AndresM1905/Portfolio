@@ -14,12 +14,17 @@ document.querySelector('nav').addEventListener('click', function(event) {
 let header=document.querySelector("header");
 let imgCircle=document.querySelector("#imgCirrcle");
 let h1=document.querySelector("#h1");
+let hr=document.querySelector("#hr");
+let h2=document.querySelector("#h2");
+let imgWelcome=document.querySelector("#welcome");
+
 
 let navScroll=document.querySelector("#navbar");
 let topNav=100;
 let rotateNav=90;
 let rigthNav= -450;
 let opacityNav=0;
+
 
 
 
@@ -45,11 +50,13 @@ buttomNav=nav.getBoundingClientRect().bottom;
 //animation
 
 var porcentajeDesplazamiento = Math.min(valorActualScroll / desplazamientoObjetivo, 1);
-console.log(porcentajeDesplazamiento);
 
 moveNav(porcentajeDesplazamiento);
 moveImgCircle(porcentajeDesplazamiento);
 moveH1(porcentajeDesplazamiento);
+moveHr(porcentajeDesplazamiento);
+moveH2(porcentajeDesplazamiento);
+moveImgWelcome(porcentajeDesplazamiento);
 
 
 });
@@ -70,10 +77,70 @@ boton.addEventListener("click",()=>{
     
 });
 
+function moveImgWelcome(porcentajeDesplazamiento){
+    var opacityImgWelcome = porcentajeDesplazamiento * 2; 
+    imgWelcome.style.opacity=1-opacityImgWelcome;
+};
+
+function moveH2(porcentajeDesplazamiento){
+
+    //---------bloque opacity--------
+    
+    var opacityH1 = porcentajeDesplazamiento * 1; 
+    h2.style.opacity= (opacityH1);
+
+       
+    //---------bloque top-------
+    
+    var bajada = porcentajeDesplazamiento * 1820;
+    h2.style.top= (-900+bajada)+"px";
+    console.log(-950+bajada);
+    
+    //---------bloque translate-X -------
+    
+    
+    var desplazamiento = porcentajeDesplazamiento * 60;
+    
+    //h2.style.left= (-60+desplazamiento)+"%";
+    
+    //---------bloque rotacion-------
+    let grados = porcentajeDesplazamiento *500; //
+    
+    //h2.style.transform = 'rotate(' + (-500+grados) + 'deg)';
+    
+    //---------bloque tamaño-------
+    
+    let tamano = porcentajeDesplazamiento * 0.9; //
+    
+    //h2.style.fontSize = (0.1+tamano)+"rem";
+    
+    
+    //-------------------------------
+    
+    }
+
+function moveHr(porcentajeDesplazamiento){
+
+    //---------bloque top-------
+    //920
+    //420
+    
+    
+    var bajada = porcentajeDesplazamiento * 520;
+    hr.style.top = 400+bajada+"px;";
+
+    //---------bloque tamaño-------
+    
+    let tamano = porcentajeDesplazamiento * 100; 
+    
+    hr.style.width = tamano+"%";
+    
+    }
+
 function moveH1(porcentajeDesplazamiento){
 
 
-    //---------bloque opacity-------
+    //---------bloque opacity--------
     
     var opacityH1 = porcentajeDesplazamiento * 1; 
     h1.style.opacity= (opacityH1);
@@ -97,10 +164,10 @@ function moveH1(porcentajeDesplazamiento){
     h1.style.fontSize = (0.1+tamano)+"rem";
     
     
-    //---------bloque top-------
-    
-    var bajada = porcentajeDesplazamiento * 420;
-    h1.style.top= (500+bajada)+"px";
+    //--------- bloque top ---------
+    //920
+    var bajada = porcentajeDesplazamiento * 1920;
+    h1.style.top= (-1000+bajada)+"px";
     
     //-------------------------------
     
@@ -129,9 +196,9 @@ imgCircle.style.transform = 'rotate(' + (130-grados) + 'deg)';
 
 //---------bloque width-------
 
-let ancho = porcentajeDesplazamiento * 400; //
+let ancho = porcentajeDesplazamiento * 700; //
 
-imgCircle.style.width =(600-ancho)+"px";
+imgCircle.style.width =(900-ancho)+"px";
 
 
 //---------bloque top-------

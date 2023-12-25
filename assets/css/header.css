@@ -41,6 +41,41 @@ header {
   transform: rotate(-200deg);
   font-size: 0.1rem;
 }
+#hr{
+  
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 3;
+  top:920px;
+  /*left: -60%;
+  transform: rotate(-200deg);
+  font-size: 0.1rem;*/
+}
+
+#h2{
+  
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 3;
+  top:-900px;
+  /*left: -60%;
+  transform: rotate(-200deg);
+  font-size: 0.1rem;*/
+}
+
+#h1Welcome{
+position:fixed;
+color: rgba(255, 217, 0, 0.691);
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 15;
+font-size: 4rem;
+
+
+}
 
 /* Estilo para las imágenes dentro del header */
 header img {
@@ -50,6 +85,7 @@ header img {
 
 /* Estilo para el video */
 header video {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -61,6 +97,17 @@ header video {
   transition: opacity 0.5s ease;
   
 }
+
+#welcome{
+position: fixed;
+top:0;
+left:0;
+min-width:100%;
+z-index: 10;
+opacity: 1;
+}
+
+
 
 /* Ocultar los controles de medios en WebKit (no siempre efectivo en iOS) */
 video::-webkit-media-controls {
@@ -79,21 +126,23 @@ video::-webkit-media-controls {
   pointer-events: none;
   z-index: -1;
   transform: scale(1.4);
-  opacity: 0;
   transition: opacity 0.5s ease;
+  opacity: 0.20;
+  
   
 }
 
 /* Media query para pantallas más pequeñas (dispositivos móviles) */
-@media (max-width: 850px) {
+@media (min-width: 850px) {
   /* Oculta el video en dispositivos móviles */
   header video {
       opacity: 0;
+      
   }
 
   /* Muestra la imagen en dispositivos móviles */
   #imagenHeader {
-    opacity: 0.20;
+    display: none;
 
   }
 }
