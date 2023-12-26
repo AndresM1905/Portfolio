@@ -68,13 +68,20 @@ header {
 #h1Welcome{
   font-family: Georgia, 'Times New Roman', Times, serif;
 position:fixed;
-color: rgba(255, 255, 255, 0.605);
+color: rgba(255, 255, 255, 0.704);
 top: 40%;
 left: 50%;
 transform: translate(-50%, -50%);
 z-index: 15;
 font-size: 4rem;
 
+& span{
+
+  /*text-shadow: 10px 10px 1px rgba(255, 255, 255, 0.148), 12px 12px 1px #4746463e;*/
+
+  text-shadow: 7px 7px 5px rgba(255, 255, 255, 0.248);
+
+}
 
 }
 
