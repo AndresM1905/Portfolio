@@ -242,7 +242,8 @@ if(porcentajeDesplazamientoMas>=1){
     navScroll.style.transform = "translate(0px,"+-50+"px)";
     document.querySelector("#portfolio>h3").classList.toggle("navRelative");
     document.querySelector("#portfolio").classList.toggle("navRelative");
-    //transform: translate(0, -20px);
+    navScroll.style.opacity= (1);
+    navScroll.style.borderRadius = (0)+"px";
 }
 
     
