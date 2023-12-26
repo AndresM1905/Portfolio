@@ -234,7 +234,6 @@ let grados;
 
 function moveNav (porcentajeDesplazamiento){
 
-   console.log("mas:",porcentajeDesplazamientoMas);
 if(porcentajeDesplazamientoMas>=1){
 
     if(posicion!=='sticky'){
@@ -269,12 +268,12 @@ navScroll.style.transform = 'rotate(' + (90-grados) + 'deg)';
 //---------bloque rigth-------
 
 
-var desplazamiento = porcentajeDesplazamiento * 450; //
+var desplazamiento = porcentajeDesplazamiento * 450; 
 navScroll.style.right= (-450+desplazamiento)+"px";
 
 //---------bloque opacity-------
 
-var opacityNav = porcentajeDesplazamiento * 1; // 360 grados para una rotación completa
+var opacityNav = porcentajeDesplazamiento * 1; 
 navScroll.style.opacity= (opacityNav);
 
 //---------bloque top-------
@@ -283,6 +282,11 @@ var bajada = porcentajeDesplazamiento * 1000;
 navScroll.style.top= (300+bajada)+"px";
 
 //-------------------------------
+var borderRadio = porcentajeDesplazamiento * 150;
+//console.log();
+navScroll.style.borderRadius = (150-borderRadio)+"px";
 }
 }
 }
+
+//<br><h2>to my portfolio</h2>
