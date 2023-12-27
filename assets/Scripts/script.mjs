@@ -9,6 +9,16 @@ import './hamburgerButton.mjs';
 import { ocultarOpenNav } from "./NavOffConditions.mjs";
 import "./CargaElementos.mjs";
 
+/*
+por si sigue sin cargar en chrome moviles.
+
+document.addEventListener('DOMContentLoaded', function() {
+  var welcomeImage = document.getElementById('welcome');
+  welcomeImage.style.height = window.innerHeight + 'px';
+});
+
+*/
+
 document.addEventListener('DOMContentLoaded', function() {
 
 
