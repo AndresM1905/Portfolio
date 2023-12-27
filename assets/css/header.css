@@ -115,10 +115,9 @@ header video {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 5;
   opacity: 1;
   width: 100vw;
-  /* 100% del viewport width */
   height: 100vh;
 }
 
