@@ -39,10 +39,17 @@
         <h1 id="h1">Carlos Andrés Martínez Ortega</h1>
         <hr id="hr"/>
         <h2 id="h2">Software Engineer</h2>
-        <video autoplay loop muted controls="false">
-        <source src="assets/video/hero.mp4" />
-        </video>
-        <div id="imagenHeader"></div>
+        <!-- Para dispositivos móviles: Imagen -->
+<picture>
+    <source srcset="assets/img/header/header.png" media="(max-width: 850px)">
+    <img src="about:blank" alt="Header image" id="imagenHeader" style="display: none;">
+  </picture>
+  
+  <!-- Para dispositivos más grandes: Video -->
+  <video id="headerVideo" autoplay loop muted controls="false" poster="about:blank" style="display: none;">
+    <source src="about:blank" type="video/mp4" />
+  </video>
+  
 
     </header>
     <nav id="navbar" class="navScroll navbar">
@@ -170,7 +177,7 @@
     <footer>
         <small>Developed and designed by Carlos Andrés Martínez Ortega. ©2024. All rights reserved.</small>
     </footer>
-        <script type="module" src='./assets/Scripts/script.mjs'></script>
+        <script type="module" src="./assets/Scripts/script.mjs"></script>
 </body>
 
 </html>

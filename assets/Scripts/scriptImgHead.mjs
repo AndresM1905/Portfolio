@@ -5,5 +5,5 @@ export function moveImgHead(porcentajeDesplazamiento){
     //---------bloque top-------
         
     let bajada = porcentajeDesplazamiento * 55;
-    imagenHeader.style.top= (-30+bajada)+"%";
+    imagenHeader.style.bottom= (55-bajada)+"%";
     };

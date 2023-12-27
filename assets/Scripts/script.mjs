@@ -7,7 +7,7 @@ import { moveWelcome } from "./BienvenidaInicial.mjs";
 import { moveImgHead } from "./scriptImgHead.mjs";
 import './hamburgerButton.mjs';
 import { ocultarOpenNav } from "./NavOffConditions.mjs";
-//import "./NavOffConditions.mjs";
+import "./CargaElementos.mjs";
 
 
 
@@ -55,8 +55,6 @@ ocultarOpenNav();
 
 
 });
-
-
 
 
 
