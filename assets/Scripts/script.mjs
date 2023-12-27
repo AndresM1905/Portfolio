@@ -30,53 +30,30 @@ const desplazamientoObjetivo = 700;
 let porcentajeDesplazamientoMas;
 let porcentajeDesplazamiento;
 
-
-//---------------------------limitador---------------------------------------
-function throttle(func, limit) {
-    let lastFunc;
-    let lastRan;
-    return function() {
-        const context = this
-        if (!lastRan) {
-            func();
-            lastRan = Date.now();
-        } else {
-            clearTimeout(lastFunc);
-            lastFunc = setTimeout(function() {
-                if ((Date.now() - lastRan) >= limit) {
-                    func();
-                    lastRan = Date.now();
-                }
-            }, limit - (Date.now() - lastRan));
-        }
-    }
-}
-
 //----------------------código animation------------------------
 
-function hola(){console.log("hola");}
+function animation() {
+    actualizarScroll();
 
-function animation(){
+    // Cálculos y manipulaciones del DOM
+    porcentajeDesplazamientoMas = Math.min(valorActualScroll / 920, 1);
+    porcentajeDesplazamiento = Math.min(valorActualScroll / desplazamientoObjetivo, 1);
 
+    moveNav(porcentajeDesplazamiento, porcentajeDesplazamientoMas);
+    moveImgCircle(porcentajeDesplazamiento);
+    moveH1(porcentajeDesplazamiento);
+    moveHr(porcentajeDesplazamiento);
+    moveH2(porcentajeDesplazamiento);
+    moveWelcome(porcentajeDesplazamiento);
+    moveImgHead(porcentajeDesplazamiento);
 
+    ocultarOpenNav();
 
- actualizarScroll();
-
-  
- //animation
- porcentajeDesplazamientoMas = Math.min(valorActualScroll / 920, 1);
- porcentajeDesplazamiento = Math.min(valorActualScroll / desplazamientoObjetivo, 1);
- 
- moveNav(porcentajeDesplazamiento,porcentajeDesplazamientoMas);
- moveImgCircle(porcentajeDesplazamiento);
- moveH1(porcentajeDesplazamiento);
- moveHr(porcentajeDesplazamiento);
- moveH2(porcentajeDesplazamiento);
- moveWelcome(porcentajeDesplazamiento);
- moveImgHead(porcentajeDesplazamiento);
- 
- 
- ocultarOpenNav();
-};
+    // Solicitar al navegador que llame a animation nuevamente en el próximo frame
+    requestAnimationFrame(animation);
+}
 //--------------------------------Listener--------------------------------
-document.addEventListener("scroll",throttle(animation, 1));
+document.addEventListener("scroll",actualizarScroll);
+
+// Inicia el ciclo de animación
+requestAnimationFrame(animation);
