@@ -1,7 +1,8 @@
 const boton=document.querySelector("#hamburger");
 const nav=document.querySelector("#navbar");
 
-boton.addEventListener("click",()=>{
+boton.addEventListener("click",(e)=>{
+    e.stopPropagation();
     nav.classList.toggle("open");
-    event.stopPropagation();
+    console.log("listenerBoton");
 });
