@@ -9,6 +9,9 @@ import './hamburgerButton.mjs';
 import { ocultarOpenNav } from "./NavOffConditions.mjs";
 import "./CargaElementos.mjs";
 
+document.addEventListener('DOMContentLoaded', function() {
+
+
 
 
 
@@ -47,13 +50,16 @@ function animation() {
     moveWelcome(porcentajeDesplazamiento);
     moveImgHead(porcentajeDesplazamiento);
 
-    ocultarOpenNav();
-
     // Solicitar al navegador que llame a animation nuevamente en el próximo frame
     requestAnimationFrame(animation);
 }
 //--------------------------------Listener--------------------------------
 document.addEventListener("scroll",actualizarScroll);
+document.addEventListener("scroll",ocultarOpenNav);
 
 // Inicia el ciclo de animación
 requestAnimationFrame(animation);
+
+
+
+  });
