@@ -30,31 +30,53 @@ const desplazamientoObjetivo = 700;
 let porcentajeDesplazamientoMas;
 let porcentajeDesplazamiento;
 
-//--------------------------------Listener--------------------------------
-document.addEventListener("scroll",()=>{
+
+//---------------------------limitador---------------------------------------
+function throttle(func, limit) {
+    let lastFunc;
+    let lastRan;
+    return function() {
+        const context = this
+        if (!lastRan) {
+            func();
+            lastRan = Date.now();
+        } else {
+            clearTimeout(lastFunc);
+            lastFunc = setTimeout(function() {
+                if ((Date.now() - lastRan) >= limit) {
+                    func();
+                    lastRan = Date.now();
+                }
+            }, limit - (Date.now() - lastRan));
+        }
+    }
+}
+
+//----------------------código animation------------------------
+
+function hola(){console.log("hola");}
+
+function animation(){
 
 
 
  actualizarScroll();
 
   
-//animation
-porcentajeDesplazamientoMas = Math.min(valorActualScroll / 920, 1);
-porcentajeDesplazamiento = Math.min(valorActualScroll / desplazamientoObjetivo, 1);
-
-moveNav(porcentajeDesplazamiento,porcentajeDesplazamientoMas);
-moveImgCircle(porcentajeDesplazamiento);
-moveH1(porcentajeDesplazamiento);
-moveHr(porcentajeDesplazamiento);
-moveH2(porcentajeDesplazamiento);
-moveWelcome(porcentajeDesplazamiento);
-moveImgHead(porcentajeDesplazamiento);
-
-
-ocultarOpenNav();
-
-
-});
-
-
-
+ //animation
+ porcentajeDesplazamientoMas = Math.min(valorActualScroll / 920, 1);
+ porcentajeDesplazamiento = Math.min(valorActualScroll / desplazamientoObjetivo, 1);
+ 
+ moveNav(porcentajeDesplazamiento,porcentajeDesplazamientoMas);
+ moveImgCircle(porcentajeDesplazamiento);
+ moveH1(porcentajeDesplazamiento);
+ moveHr(porcentajeDesplazamiento);
+ moveH2(porcentajeDesplazamiento);
+ moveWelcome(porcentajeDesplazamiento);
+ moveImgHead(porcentajeDesplazamiento);
+ 
+ 
+ ocultarOpenNav();
+};
+//--------------------------------Listener--------------------------------
+document.addEventListener("scroll",throttle(animation, 2));

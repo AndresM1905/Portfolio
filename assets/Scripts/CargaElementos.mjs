@@ -1,21 +1,3 @@
-/*const screenWidth = window.innerWidth;
-const headerVideo = document.getElementById('headerVideo');
-const headerImage = document.getElementById('imagenHeader');
-
-if (screenWidth > 850) {
-  // Para pantallas grandes, carga el video
-  headerVideo.style.display = 'block';
-  headerVideo.src = 'assets/video/hero.mp4';
-  headerVideo.load();
-} else {
-  // Para pantallas pequeñas, carga la imagen
-  headerImage.style.display = 'block';
-  headerImage.src = 'assets/img/header/header.png';
-}*/
-
-
-
-//_-----------------------------
 let videoCargado = false;
 let videoMostrado=false;
 function cargarRecurso() {
