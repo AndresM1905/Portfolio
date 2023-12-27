@@ -79,4 +79,4 @@ function animation(){
  ocultarOpenNav();
 };
 //--------------------------------Listener--------------------------------
-document.addEventListener("scroll",throttle(animation, 2));
+document.addEventListener("scroll",throttle(animation, 1));
