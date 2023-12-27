@@ -66,7 +66,7 @@ header {
 }
 
 #h1Welcome{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+font-family: Georgia, 'Times New Roman', Times, serif;
 position:fixed;
 color: rgba(255, 255, 255, 0.704);
 top: 40%;
