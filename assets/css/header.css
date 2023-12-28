@@ -77,13 +77,11 @@ header {
   z-index: 15;
   font-size: 2.3rem;
   white-space: nowrap;
+  pointer-events: none;
 
   & span {
 
     display: inline;
-
-    /*text-shadow: 10px 10px 1px rgba(255, 255, 255, 0.148), 12px 12px 1px #4746463e;*/
-
     text-shadow: 7px 7px 5px rgba(255, 255, 255, 0.248);
 
   }
@@ -115,11 +113,10 @@ header video {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 5;
   opacity: 1;
-  width: 100vw;
-  /* 100% del viewport width */
-  height: 100vh;
+  pointer-events: none;
+
 }
 
 
@@ -135,19 +132,12 @@ video::-webkit-media-controls {
   margin: 0;
   padding: 0;
   position: absolute;
-
-
-
   right: 50%;
   transform: translate(50%, 0%);
   min-width: 200%;
-
-
-
   opacity: 0.15;
   pointer-events: none;
   z-index: -1;
-  ;
   transition: opacity 0.5s ease;
 
 

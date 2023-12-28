@@ -27,7 +27,13 @@
 <body>
     <header class="scroll">
         <img id="imgCirrcle" class="circle imgCircleScroll" src="assets/img/logos/large.jpeg" alt="logo large" />
-        <img id="welcome" src="./assets/img/header/welcome.png" alt="welcome"/>
+        <img id="welcome" src="./assets/img/header/welcome.png" alt="welcome"
+     srcset="./assets/img/header/welcome-320W.png 320w,
+            ./assets/img/header/wlecome-640w.jpeg 640w,
+            ./assets/img/header/welcome.png 1024w"
+     sizes="(max-width: 500px) 320px,
+            (max-width: 900px) 600px,
+            1024px"/>
         <h1 id="h1Welcome"><span>W</span>
         <span>e</span>
         <span>l</span>

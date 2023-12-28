@@ -12,7 +12,7 @@ if(buttomNav>topCentro && nav.classList.contains("open")){
 
 window.addEventListener("click",()=>{
     if(nav.classList.contains("open")){
-          nav.classList.remove("open") ;
+         nav.classList.remove("open") ;
     };
     
     });
