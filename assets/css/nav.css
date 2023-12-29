@@ -16,6 +16,11 @@
     transform: rotate(90deg);
     opacity: 0;
     border-radius: 150px;
+    overflow-x: hidden;
+
+    &div{
+        margin: 0;
+    }
     
 
 }
@@ -75,7 +80,7 @@
     color: var(--white);
     font-size: 1.5rem;
     padding: .2rem .7rem;
-    margin: .7rem;
+    margin: 0;
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease,color 0.3s ease;
