@@ -1,5 +1,7 @@
 let videoCargado = false;
 let videoMostrado=false;
+let rutaVideo="../video/fondo.mp4";
+let rutaVideoBueno=document.querySelector("#videoBueno").src;
 function cargarRecurso() {
     const screenWidth = window.innerWidth;
     const headerVideo = document.getElementById('headerVideo');
@@ -14,7 +16,8 @@ function cargarRecurso() {
 
         // Carga el video solo si aún no se ha cargado
         if (!videoCargado) {
-            headerVideo.src = 'assets/video/hero.mp4';
+
+            headerVideo.src = rutaVideoBueno;
             headerVideo.load();
             videoCargado = true; // Actualiza la bandera a verdadero
         }
@@ -25,7 +28,7 @@ function cargarRecurso() {
         videoMostrado=false;
         // Para pantallas pequeñas, muestra la imagen
         imagenHeader.style.display = 'block';
-        imagenHeader.src = 'assets/img/header/header.png';
+        imagenHeader.src = './assets/img/header/header.png';
 
         // Oculta el video
         headerVideo.style.display = 'none';

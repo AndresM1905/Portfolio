@@ -50,9 +50,6 @@ header {
   position: relative;
   z-index: 3;
   top: 920px;
-  /*left: -60%;
-  transform: rotate(-200deg);
-  font-size: 0.1rem;*/
 }
 
 #h2 {
@@ -62,9 +59,6 @@ header {
   position: relative;
   z-index: 3;
   top: -900px;
-  /*left: -60%;
-  transform: rotate(-200deg);
-  font-size: 0.1rem;*/
 }
 
 #h1Welcome {

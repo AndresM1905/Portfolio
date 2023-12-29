@@ -3,6 +3,7 @@ body {
     color: var(--gray3);
     text-align: center;
     font-size: 14px;
+    overflow-x: hidden;
 }
 
 header,

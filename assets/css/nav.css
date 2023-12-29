@@ -47,15 +47,17 @@
         transform: rotate(0);
     }
 
-    16%{transform: rotate(2deg);}
+    16%{
+        transform: rotate(2deg);
+    }
     32% {
-        transform: rotate(-2deg); /* Inclina a la izquierda */
+        transform: rotate(-2deg); 
     }
     48% {
-        transform: rotate(0.7deg); /* Inclina a la derecha */
+        transform: rotate(0.7deg); 
     }
     64% {
-        transform: rotate(-0.7deg); /* Vuelve al centro */
+        transform: rotate(-0.7deg);
     }
     80%{transform: rotate(0.3deg);}
 
