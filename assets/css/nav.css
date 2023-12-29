@@ -16,11 +16,7 @@
     transform: rotate(90deg);
     opacity: 0;
     border-radius: 150px;
-    overflow-x: hidden;
 
-    &div{
-        margin: 0;
-    }
     
 
 }
