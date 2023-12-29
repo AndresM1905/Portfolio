@@ -1,16 +1,15 @@
 /* Estilos base para el header */
 header {
-  padding: 0rem 0 3rem;
+  padding: 0rem 0 0rem;
   position: relative;
   overflow: hidden;
   background: linear-gradient(var(--black), var(--black2));
-  z-index: 0;
+  z-index: 4;
 }
 
 .scroll {
-  padding: 0rem 0 3rem;
+  padding: 0rem 0 0rem;
   position: relative;
-  overflow: hidden;
   background: linear-gradient(var(--black), var(--black2));
   z-index: 0;
   height: 1300px;
@@ -36,7 +35,7 @@ header {
   margin: 0;
   padding: 0;
   position: relative;
-  z-index: 3;
+  z-index: 1;
   top: 500px;
   left: -60%;
   transform: rotate(-200deg);
@@ -72,6 +71,8 @@ header {
   font-size: 2.3rem;
   white-space: nowrap;
   pointer-events: none;
+  margin: 0;
+  padding: 0;
 
   & span {
 
@@ -84,6 +85,7 @@ header {
 
 /* Estilo para las imágenes dentro del header */
 header img {
+  
   width: 150px;
   opacity: 1;
 }
