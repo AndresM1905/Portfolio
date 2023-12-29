@@ -9,6 +9,7 @@
     z-index: 3;
     box-shadow: none; 
     transition: box-shadow 5s ease-in-out;
+    overflow-x: hidden;
 }
 
 
