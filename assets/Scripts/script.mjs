@@ -8,6 +8,7 @@ import { moveImgHead } from "./scriptImgHead.mjs";
 import './hamburgerButton.mjs';
 import { ocultarOpenNav } from "./NavOffConditions.mjs";
 import "./CargaElementos.mjs";
+import "./listenerExperience.mjs";
 
 document.addEventListener('DOMContentLoaded', function() {
     
